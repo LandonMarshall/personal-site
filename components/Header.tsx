@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Link from "next/link";
+import NextLink from "next/link";
 import { useRouter } from "next/router";
 
 import AppBar from '@mui/material/AppBar';
@@ -8,6 +8,7 @@ import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
+import Link from '@mui/material/Link';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Avatar from '@mui/material/Avatar';
@@ -16,7 +17,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 
-const pages = [{ name: 'Score Tracker', url: '/score-tracker' }];
+const pages = [{ name: 'Record Tracker', url: '/record-tracker' }];
 
 const Header: React.FC = () => {
   const router = useRouter();
@@ -77,7 +78,11 @@ const Header: React.FC = () => {
               }}
             >
               {pages.map((page) => (
-                <Link href={page.url}>{page.name}</Link>
+                <NextLink href={page.url} passHref>
+                  <Link sx={{ color: 'black' }}>
+                    {page.name}
+                  </Link>
+                </NextLink>
               ))}
             </Menu>
           </Box>
@@ -102,7 +107,11 @@ const Header: React.FC = () => {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
-              <Link href={page.url}>{page.name}</Link>
+              <NextLink href={page.url} passHref>
+                <Link sx={{ color: 'white' }}>
+                  {page.name}
+                </Link>
+              </NextLink>
             ))}
           </Box>
 

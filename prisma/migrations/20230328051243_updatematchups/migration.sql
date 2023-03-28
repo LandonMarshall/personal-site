@@ -1,0 +1,5 @@
+-- AlterTable
+ALTER TABLE "MatchupGame" ALTER COLUMN "player1Record" DROP NOT NULL,
+ALTER COLUMN "player1Record" SET DEFAULT 0,
+ALTER COLUMN "player2Record" DROP NOT NULL,
+ALTER COLUMN "player2Record" SET DEFAULT 0;

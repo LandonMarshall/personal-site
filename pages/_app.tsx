@@ -1,5 +1,5 @@
 import { AppProps } from "next/app";
-import theme from '../theme';
+import theme from 'theme';
 import { ThemeProvider } from '@mui/material/styles';
 
 import '@fontsource/roboto/300.css';

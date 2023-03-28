@@ -31,8 +31,8 @@ CREATE TABLE "Matchup" (
 CREATE TABLE "MatchupGame" (
     "id" SERIAL NOT NULL,
     "name" TEXT,
-    "player1Score" INTEGER NOT NULL,
-    "player2Score" INTEGER NOT NULL,
+    "player1Record" INTEGER NOT NULL,
+    "player2Record" INTEGER NOT NULL,
     "matchupId" INTEGER NOT NULL,
 
     CONSTRAINT "MatchupGame_pkey" PRIMARY KEY ("id")

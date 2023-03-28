@@ -1,7 +1,7 @@
 import React from "react"
 import { GetStaticProps } from "next"
-import Layout from "../components/Layout"
-import prisma from '../lib/prisma';
+import Layout from "components/Layout"
+import prisma from 'lib/prisma';
 
 const Home: React.FC = () => {
   return (

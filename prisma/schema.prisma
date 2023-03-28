@@ -22,16 +22,15 @@ model User {
 
 model Matchup {
   id           Int           @id @default(autoincrement())
-  player1Name  String
-  player2Name  String
+  name         String
   matchupGames MatchupGame[]
 }
 
 model MatchupGame {
-  id           Int      @id @default(autoincrement())
-  name         String?
-  player1Score Int
-  player2Score Int
-  matchupId    Int
-  matchup      Matchup? @relation(fields: [matchupId], references: id)
+  id            Int      @id @default(autoincrement())
+  name          String?
+  player1Record Int? @default(value: 0)
+  player2Record Int? @default(value: 0)
+  matchupId     Int
+  matchup       Matchup? @relation(fields: [matchupId], references: id)
 }

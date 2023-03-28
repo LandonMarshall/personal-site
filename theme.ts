@@ -17,4 +17,11 @@ export default createTheme({
       // contrastText: will be calculated to contrast with palette.primary.main
     },
   },
+  components: {
+    MuiButtonBase: {
+      defaultProps: {
+        disableRipple: true,
+      },
+    },
+  },
 });
