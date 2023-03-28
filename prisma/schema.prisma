@@ -10,21 +10,28 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Post {
-  id        String     @default(cuid()) @id
-  title     String
-  content   String?
-  published Boolean @default(false)
-  author    User?   @relation(fields: [authorId], references: [id])
-  authorId  String?
+model User {
+  id        Int      @id @default(autoincrement())
+  name      String?
+  email     String?  @unique
+  createdAt DateTime @default(now()) @map(name: "created_at")
+  updatedAt DateTime @updatedAt @map(name: "updated_at")
+
+  @@map(name: "users")
 }
 
-model User {
-  id            String       @default(cuid()) @id
-  name          String?
-  email         String?   @unique
-  createdAt     DateTime  @default(now()) @map(name: "created_at")
-  updatedAt     DateTime  @updatedAt @map(name: "updated_at")
-  posts         Post[]
-  @@map(name: "users")
+model Matchup {
+  id           Int           @id @default(autoincrement())
+  player1Name  String
+  player2Name  String
+  matchupGames MatchupGame[]
+}
+
+model MatchupGame {
+  id           Int      @id @default(autoincrement())
+  name         String?
+  player1Score Int
+  player2Score Int
+  matchupId    Int
+  matchup      Matchup? @relation(fields: [matchupId], references: id)
 }
