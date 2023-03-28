@@ -8,9 +8,10 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 
 const App = ({ Component, pageProps }: AppProps) => {
+  const AnyComponent = Component as any;
   return (
     <ThemeProvider theme={theme}>
-      <Component {...pageProps} />
+      <AnyComponent {...pageProps} />
     </ThemeProvider>
   );
 };

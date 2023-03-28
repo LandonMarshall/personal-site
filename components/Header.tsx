@@ -16,7 +16,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 
-const pages = [{ name: 'ScoreTracker', url: '/score-tracker' }];
+const pages = [{ name: 'Score Tracker', url: '/score-tracker' }];
 
 const Header: React.FC = () => {
   const router = useRouter();
