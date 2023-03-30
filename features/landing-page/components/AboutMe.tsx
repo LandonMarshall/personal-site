@@ -42,7 +42,7 @@ const AboutMe: React.FC = () => {
               borderRadius: '50%',
             }}
             alt="Photo of me"
-            src="/static/me.jpg"
+            src="static/images/me.JPG"
           />
         </Grid>
         <Grid item xs={12} md={6}>
