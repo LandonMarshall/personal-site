@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "@mui/material/Button";
 import { getPlayersFromString } from "utils/players-helpers";
+import Typography from "@mui/material/Typography";
 
 export type MatchupGameProps = {
   id: number;
@@ -18,12 +19,12 @@ const MatchupGame: React.FC<{ matchupGame: MatchupGameProps }> = ({ matchupGame 
   const [player1, player2] = getPlayersFromString(matchupGame.matchup.name);
   return (
     <>
-      <div>
+      <Typography>
         {matchupGame.name}
-      </div>
-      <div>
+      </Typography>
+      <Typography>
         {`${player1}: ${player1Score} - ${player2}: ${player2Score}`}
-      </div>
+      </Typography>
       <Button variant="contained">Edit score</Button>
     </>
   );

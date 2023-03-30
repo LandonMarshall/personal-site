@@ -1,31 +1,28 @@
-import React from "react"
-import { GetStaticProps } from "next"
-import Layout from "components/Layout"
-import prisma from 'lib/prisma';
+import React from "react";
+import Layout from "components/Layout";
+import AboveFold from "features/landing-page/components/AboveFold";
+import AboutMe from "features/landing-page/components/AboutMe";
 
 const Home: React.FC = () => {
   return (
     <Layout>
       <div className="page">
-        <h1>Landon Marshall</h1>
-        <main>
-          Hi my name is Landon
-        </main>
+        <AboveFold />
+        <AboutMe />
       </div>
-      <style jsx>{`
-        .post {
-          background: white;
-          transition: box-shadow 0.1s ease-in;
-        }
+      <style jsx global>{`
+    html,
+    body {
+      padding: 0;
+      margin: 0;
+      font-family: 'Outfit';
+      font-display: block;
+    }
 
-        .post:hover {
-          box-shadow: 1px 1px 3px #aaa;
-        }
-
-        .post + .post {
-          margin-top: 2rem;
-        }
-      `}</style>
+    * {
+      box-sizing: border-box;
+    }
+  `}</style>
     </Layout>
   )
 }

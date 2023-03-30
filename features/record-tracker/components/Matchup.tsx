@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Button from "@mui/material/Button";
 import { getPlayersFromString } from "utils/players-helpers";
-import { TextField } from "@mui/material";
-import prisma from "lib/prisma";
+import TextField from "@mui/material/TextField";
+import Typography from "@mui/material/Typography";
 
 export type MatchupProps = {
   id: number;
@@ -32,13 +32,13 @@ const Matchup: React.FC<{ matchup: MatchupProps }> = ({ matchup }) => {
 
   return (
     <>
-      <div>
+      <Typography>
         {matchup.name}
-      </div>
+      </Typography>
       {matchup.matchupGames.map((game) => (
         <>
-          <p key={game.id}>Game: {game.name}</p>
-          <p>Record: {`${player1}: ${game.player1Record}`} - {`${player2}: ${game.player2Record}`}</p>
+          <Typography key={game.id}>Game: {game.name}</Typography>
+          <Typography>Record: {`${player1}: ${game.player1Record}`} - {`${player2}: ${game.player2Record}`}</Typography>
         </>
       ))}
       <form>

@@ -2,7 +2,7 @@ import React from "react";
 import { GetServerSideProps } from "next";
 import prisma from "lib/prisma";
 import Layout from "components/Layout";
-import Matchup, { MatchupProps } from "components/Matchup";
+import Matchup, { MatchupProps } from "features/record-tracker/components/Matchup";
 import { sortPlayersString } from "utils/players-helpers";
 
 
