@@ -31,7 +31,7 @@ const AboveFold: React.FC = () => {
         justifyContent: 'center',
       }}>
         <Typography color="text.primary" variant="h1">Landon Marshall</Typography>
-        <Typography color="text.secondary" variant="h6">Software Engineer // Front End Lead </Typography>
+        <Typography color="text.secondary" variant="h6">Software Engineer // Victoria, BC </Typography>
         <Container disableGutters sx={{
           ml: 0,
         }}>

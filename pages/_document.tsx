@@ -8,6 +8,8 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+        <link rel="shortcut icon" href="/static/images/favicon.ico" />
+        <title>Landon Marshall</title>
         <link rel="preload" href="/fonts/Outfit-Light.ttf" as="font" crossOrigin="anonymous" />
         <link rel="preload" href="/fonts/Outfit-SemiBold.ttf" as="font" crossOrigin="anonymous" />
         <link rel="preload" href="/fonts/Outfit-Bold.ttf" as="font" crossOrigin="anonymous" />
